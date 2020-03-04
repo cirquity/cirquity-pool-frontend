@@ -5,10 +5,8 @@ let telegram = "https://t.me/cirquity";
 let discord = "https://chat.cirquity.com";
 let facebook = "https://www.facebook.com/cirquity";
 let marketCurrencies = ["{symbol}-BTC", "{symbol}-LTC", "{symbol}-DOGE", "{symbol}-USDT", "{symbol}-USD", "{symbol}-EUR", "{symbol}-CAD"];
-let blockchainExplorer = "http://chainradar.com/{symbol}/block/{id}";
-let blockchainExplorerMerged = "http://explorer.ird.cash/?hash={id}#block";
-let transactionExplorer = "http://chainradar.com/{symbol}/transaction/{id}";
-let transactionExplorerMerged = "http://explorer.ird.cash/?hash={id}#transaction";
+let blockchainExplorer = "https://explorer.cirquity.com/block.html?hash={id}";
+let transactionExplorer = "https://explorer.cirquity.com/transaction.html?hash={id}";
 let themeCss = "themes/default.css";
 let defaultLang = 'en';
 let languages = {
