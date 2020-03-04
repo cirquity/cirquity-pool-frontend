@@ -44,7 +44,9 @@ You can configure the API to be accessible via SSL using various methods. Find a
 
 * Using SSL api in `config.json`:
 
-By using this you will need to update your `api` variable in the `config.js`. For example: `var api = "https://poolhost:8119";`
+By using this you will need to update your `api` variable in the `config.js`.
+
+For example: `var api = "https://poolhost:8119";`
 
 * Inside your SSL Listener, add the following:
 
@@ -55,7 +57,9 @@ location ~ ^/api/(.*) {
 }
 ```
 
-By adding this you will need to update your `api` variable in the `config.js` to include the /api. For example: `var api = "http://poolhost/api";`
+By adding this you will need to update your `api` variable in the `config.js` to include the /api.
+
+For example: `var api = "http://poolhost/api";`
 
 You no longer need to include the port in the variable because of the proxy connection.
 
@@ -83,6 +87,8 @@ server {
 }
 ```
 
-By adding this you will need to update your `api` variable in the `config.js`. For example: `var api = "//api.poolhost.com";`
+By adding this you will need to update your `api` variable in the `config.js`.
+
+For example: `var api = "//api.poolhost.com";`
 
 You no longer need to include the port in the variable because of the proxy connection.
