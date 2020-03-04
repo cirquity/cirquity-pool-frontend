@@ -76,11 +76,11 @@
                                 <div class="card-body">
                                     <ul class="list-unstyled">
                                         <li>
-                                            <strong>Last check:</strong> {{monitoringDaemon.lastCheck}}
+                                            <strong>Last check:</strong> <code>{{monitoringDaemon.lastCheck}}</code>
                                         </li>
                                         <li>
                                             <strong>Last status:</strong>
-                                            <span id="daemonStatus">{{monitoringDaemon.lastStatus}}</span>
+                                            <code><span id="daemonStatus" class="text-uppercase">{{monitoringDaemon.lastStatus}}</span></code>
                                         </li>
                                         <li>
                                             <strong>Last response:</strong>
@@ -88,7 +88,7 @@
                                         </li>
                                         <li>
                                             <strong>Last fail:</strong>
-                                            <span>{{monitoringDaemon.lastFail}}</span>
+                                            <code>{{monitoringDaemon.lastFail}}</code>
                                         </li>
                                         <li>
                                             <strong>Last fail response:</strong>
@@ -110,11 +110,12 @@
                                 <div class="card-body">
                                     <ul class="list-unstyled">
                                         <li>
-                                            <strong>Last check:</strong> {{monitoringWallet.lastCheck}}
+                                            <strong>Last check:</strong>
+                                            <code>{{monitoringWallet.lastCheck}}</code>
                                         </li>
                                         <li>
                                             <strong>Last status:</strong>
-                                            <span id="walletStatus">{{monitoringWallet.lastStatus}}</span>
+                                            <code><span id="walletStatus" class="text-uppercase">{{monitoringWallet.lastStatus}}</span></code>
                                         </li>
                                         <li>
                                             <strong>Last response:</strong>
@@ -122,7 +123,7 @@
                                         </li>
                                         <li>
                                             <strong>Last fail:</strong>
-                                            <span>{{monitoringWallet.lastFail}}</span>
+                                            <code>{{monitoringWallet.lastFail}}</code>
                                         </li>
                                         <li>
                                             <strong>Last fail response:</strong>
@@ -151,7 +152,7 @@
                                 <tbody>
                                     {{#each logs}}
                                     <tr>
-                                        <td data-sort="{{@key}}"><a href="{{this.link}}" target="_blank">{{@key}}</a></td>
+                                        <td data-sort="{{@key}}"><a href="{{this.link}}" target="_blank"><strong>{{@key}}</strong></a></td>
                                         <td data-sort="{{this.changed}}">{{this.changed}}</td>
                                         <td data-sort="{{this.size}}">{{this.size}} bytes</td>
                                     </tr>
