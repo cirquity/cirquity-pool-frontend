@@ -152,7 +152,7 @@
                                 <tbody>
                                     {{#each logs}}
                                     <tr>
-                                        <td data-sort="{{@key}}"><a href="{{this.link}}" target="_blank"><strong>{{@key}}</strong></a></td>
+                                        <td data-sort="{{@key}}"><a href="{{this.link}}" target="_blank"><strong>{{this.name}}</strong></a> <code>({{@key}})</code></td>
                                         <td data-sort="{{this.changed}}">{{this.changed}}</td>
                                         <td data-sort="{{this.size}}">{{this.size}} bytes</td>
                                     </tr>
