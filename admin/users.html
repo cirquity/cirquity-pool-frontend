@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cirquity - Mining Pool | Admin</title>
+    <meta charset="utf-8">
+    <meta name="description" content="A private, fast, and easy way to send money to friends and businesses">
+    <meta name="author" content="The Cirquity Developers">
+    <meta name="keywords" content="cirq, cirquity, cryptocurrency, private, fast, secure">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon-16x16.png">
+    <link rel="manifest" href="/img/icons/site.webmanifest">
+    <link rel="mask-icon" href="/img/icons/safari-pinned-tab.svg" color="#335eea">
+    <link rel="shortcut icon" href="/img/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="/img/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="/css/app.min.css">
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top justify-content-between py-3 mb-3">
+            <div class="container">
+                <a class="navbar-brand  translatable" href="/">
+                    <img src="/img/logo.png" alt="Cirquity">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link translatable" href="index.html">Statistics</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link translatable" href="monitor.html">Monitoring</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link translatable active" href="users.html">Users List</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link translatable" href="/">Return to Pool</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="statistics" class="statistics">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card shadow-light">
+                            <div class="card-header font-weight-bold text-muted">
+                                <h6 class="m-0">Users List (<span id="totalUsers">0</span> users)</h6>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Wallet</th>
+                                            <th scope="col">Hashrate</th>
+                                            <th scope="col">Hashes</th>
+                                            <th scope="col">Pending</th>
+                                            <th scope="col">Paid</th>
+                                            <th scope="col">Last share</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="small-row" id="template"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script id="usersListTable" type="text/x-handlebars-template">
+            {{#each users}}
+            <tr>
+                <td class="col1"><a href="/?wallet={{this.miner}}#worker_stats"><strong>{{this.minerLabel}}</strong></a></td>
+                <td class="col2" data-sort="{{this.wallet.hashrate}}">{{this.readableHashrate}}</td>
+                <td class="col3" data-sort="{{this.wallet.hashes}}">{{this.readableHashes}}</td>
+                <td class="col4" data-sort="{{this.wallet.pending}}">{{this.readablePending}}</td>
+                <td class="col5" data-sort="{{this.wallet.paid}}">{{this.readablePaid}}</td>
+                <td class="col6" data-sort="{{this.wallet.lastShare}}">{{this.timeago}}</td>
+            </tr>
+            {{/each}}
+        </script>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-details row">
+                <div class="col-md-6 col-lg-3 footer-widget">
+                    <a href="https://cirquity.com"><img src="/img/logo.png" class="logo mb-2" alt="Cirquity"></a>
+                    <p class="sub-heading">Private, fast, secure</p>
+                </div>
+                <div class="col-md-6 col-lg-2 offset-lg-1 footer-widget">
+                    <h5 class="widget-title text-uppercase">Resources</h5>
+                    <ul class="text-muted">
+                        <li><a href="javascript:void(0)" class="text-reset disabled d-none" title="Coming soon">Coin Overview</a></li>
+                        <li><a href="javascript:void(0)" class="text-reset disabled d-none" title="Coming soon">How to Trade Coin</a></li>
+                        <li><a href="https://medium.com/@cirquity" class="text-reset">Blog News</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-2 offset-lg-1 footer-widget">
+                    <h5 class="widget-title text-uppercase">Quick Links</h5>
+                    <ul class="text-muted">
+                        <li><a href="https://explorer.cirquity.com" class="text-reset">Block Explorer</a></li>
+                        <li><a href="https://pool.cirquity.com" class="text-reset">Main Pool</a></li>
+                        <li><a href="javascript:void(0)" class="text-reset disabled d-none" title="Coming soon">Exchange Markets</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-3 footer-widget pl-lg-5 pl-3">
+                    <h6 class="widget-title text-uppercase">Get in touch</h6>
+                    <div class="social text-muted">
+                        <a href="https://github.com/cirquity" class="github text-reset"><i class="fab fa-github-alt"></i></a>
+                        <a href="https://twitter.com/cirquity" class="twitter text-reset"><i class="fab fa-twitter"></i></a>
+                        <a href="https://facebook.com/cirquity" class="facebook text-reset"><i class="fab fa-facebook"></i></a>
+                        <a href="https://medium.com/@cirquity" class="facebook text-reset"><i class="fas fa-bullhorn"></i></a>
+                        <a href="https://t.me/cirquity" class="telegram text-reset"><i class="fab fa-telegram-plane"></i></a>
+                        <a href="https://chat.cirquity.com" class="discord text-reset"><i class="fab fa-discord"></i></a>
+                        <a href="https://www.reddit.com/r/cirquity" class="reddit text-reset d-none"><i class="fab fa-reddit-alien"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row">
+                    <div class="col-lg-4 store-links text-center text-lg-left pb-3 pb-lg-0">
+                        <p class="text-muted">&copy; 2020 Cirquity</p>
+                    </div>
+                    <div class="col-lg-8 text-center text-lg-right d-none">
+                        <ul class="footer-nav text-muted">
+                            <li><a href="" class="text-reset">Terms of Use</a></li>
+                            <li><a href="" class="text-reset">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--====== Javascript & Jquery ======-->
+    <script src="/config.js"></script>
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/bootstrap/bootstrap.bundle.js"></script>
+    <script src="/vendor/mustache/mustache.min.js"></script>
+    <script src="/vendor/timeago/jquery.timeago.js"></script>
+    <script src="/vendor/handlebars/handlebars.min.js"></script>
+    <script src="/js/translate.min.js"></script>
+    <script src="/js/app.min.js"></script>
+    <script src="/js/admin/users.min.js"></script>
+</body>
+</html>

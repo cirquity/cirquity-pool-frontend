@@ -1,0 +1,57 @@
+{
+    "title": "Cirquity",
+    "name": "cirquity-pool",
+    "version": "0.1.0",
+    "scripts": {
+        "start": "node_modules/.bin/gulp watch"
+    },
+    "description": "Cirquity is a private, fast, and easy way to send money to friends and businesses!",
+    "keywords": [
+        "css",
+        "sass",
+        "html",
+        "responsive",
+        "theme",
+        "template"
+    ],
+    "homepage": "https://cirquity.com",
+    "bugs": {
+        "url": "https://github.com/cirquity/cirquity-pool/issues",
+        "email": "cirquity@gmail.com"
+    },
+    "license": "MIT",
+    "author": "The Cirquity Developers",
+    "contributors": [
+        "Deeterd (https://deeterd.com)"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/cirquity/cirquity-pool.git"
+    },
+    "dependencies": {
+        "@fortawesome/fontawesome-free": "5.10.2",
+        "bootstrap": "4.3.1",
+        "chart.js": "^2.9.3",
+        "handlebars": "^4.7.3",
+        "jquery": "3.4.1",
+        "jquery-sparkline": "^2.4.0",
+        "moment": "^2.24.0",
+        "mustache": "^4.0.0",
+        "popper.js": "^1.16.0",
+        "timeago": "^1.6.7"
+    },
+    "devDependencies": {
+        "browser-sync": "2.26.7",
+        "del": "5.1.0",
+        "gulp": "4.0.2",
+        "gulp-autoprefixer": "7.0.0",
+        "gulp-clean-css": "4.2.0",
+        "gulp-concat": "^2.6.1",
+        "gulp-header": "2.0.9",
+        "gulp-plumber": "^1.2.1",
+        "gulp-rename": "1.4.0",
+        "gulp-sass": "4.0.2",
+        "gulp-uglify-es": "^2.0.0",
+        "merge-stream": "2.0.0"
+    }
+}

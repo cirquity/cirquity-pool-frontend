@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cirquity - Mining Pool</title>
+    <meta charset="utf-8">
+    <meta name="description" content="A private, fast, and easy way to send money to friends and businesses">
+    <meta name="author" content="The Cirquity Developers">
+    <meta name="keywords" content="cirq, cirquity, cryptocurrency, private, fast, secure">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon-16x16.png">
+    <link rel="manifest" href="/img/icons/site.webmanifest">
+    <link rel="mask-icon" href="/img/icons/safari-pinned-tab.svg" color="#335eea">
+    <link rel="shortcut icon" href="/img/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="/img/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="/css/app.min.css">
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top justify-content-between py-3 mb-3">
+            <div class="container">
+                <a class="navbar-brand  translatable" href="/">
+                    <img src="/img/logo.png" alt="Cirquity">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link translatable" href="index.html" data-translate-key="dashboard">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link translatable" href="start.html" data-translate-key="gettingStarted">Getting Started</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownDetails" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-translate-key="details">Details</a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownDetails" id="detailsMenu">
+                                <a class="dropdown-item translatable" href="statistics.html" data-translate-key="yourStats">My Stats</a>
+                                <a class="dropdown-item translatable" href="blocks.html" data-translate-key="poolBlocks">Pool Blocks</a>
+                                <a class="dropdown-item translatable" href="payments.html" data-translate-key="payments">Payments</a>
+                                <a class="dropdown-item translatable" href="top.html" data-translate-key="top10miners">Top 10 Miners</a>
+                                <a class="dropdown-item translatable" href="market.html" data-translate-key="market">Market / Calculator</a>
+                                <a class="dropdown-item translatable" href="settings.html" data-translate-key="settings">Settings</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item translatable active" href="faq.html" data-translate-key="faq">FAQ</a>
+                            </div>
+                        </li>
+                        <li class="nav-item ml-md-4" id="langSelector"></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+        <section id="faq" class="faq">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card shadow-light mb-4">
+                            <div class="card-header font-weight-bold text-muted" data-translate-key="faqQuestion1">
+                                Where are the stats for the pool? Why hasn't anything changed?
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text text-dark mb-0" data-translate-key="faqAnswer1">
+                                    The dashboard lists the coins being mined, reward for each block, current effort on each block for the merged mining. Sometimes the Pool Blocks section and Worker Statistics needs a refresh by your browser to get updated stats. Typically that is pressing CTRL+F5 to flush the cache and ask your browser for fresh data.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card shadow-light mb-4">
+                            <div class="card-header font-weight-bold text-muted" data-translate-key="faqQuestion2">
+                                What is difficulty?
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text text-dark mb-0" data-translate-key="faqAnswer2">
+                                    Difficulty is a measure of how difficult it is to find a hash below a given target. The target difficulty changes from block to block based on the network hashrate attempted by all nodes on a coin network. However, the difficulty for child coins can be dissimilar to the parent coin you start mining with.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card shadow-light mb-4">
+                            <div class="card-header font-weight-bold text-muted" data-translate-key="faqQuestion3">
+                                What is luck?
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text text-dark mb-0" data-translate-key="faqAnswer3">
+                                    Mining is probabilistic in nature: if you find a block earlier than you statistically should on average you are lucky if it takes longer, you are unlucky. In a perfect World pool would find a block on 100% luck value. Less then 100% means the pool was lucky. More then 100% means the pool was unlucky.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card shadow-light mb-4">
+                            <div class="card-header font-weight-bold text-muted" data-translate-key="faqQuestion4">
+                                What is share?
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text text-dark mb-0" data-translate-key="faqAnswer4">
+                                    Share is a possible valid hash for the block. Shares are beings sent by your rigs to the pool to prove their work. You should set your fixed difficulty to be somewhere around your hash rate average on your miner multiplied by 28-30. Aim for your average number of accepted shares to be within the block time (30 seconds for CIRQ) If your shares are accepted faster, but with lower difficulty each share is worth less, but you should get at least one share in per average block time. It doesn't help the pool by spamming a large amount of low difficulty shares. It tends to tie up more resources and might get you banned.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card shadow-light mb-4">
+                            <div class="card-header font-weight-bold text-muted" data-translate-key="faqQuestion5">
+                                What is block?
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text text-dark mb-0" data-translate-key="faqAnswer5">
+                                    Transaction data is recorded in blocks. New transactions are being processes by miners into new blocks which are added to the end of the blockchain.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card shadow-light mb-4">
+                            <div class="card-header font-weight-bold text-muted" data-translate-key="faqQuestion6">
+                                How long does it take to find a block?
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text text-dark mb-0" data-translate-key="faqAnswer6">
+                                    It depends on amount of active miners. The more miners work on pool &rightarrow; the more hashrate pool has &rightarrow; the more blocks are found by the pool. However the more miners are active &rightarrow; the less reward you get from each block found. Probabilistically, even smaller pools will less miners or hash rate will eventually get a block. Decentralizing the hash proof of work across several pools on any network is important for security of the coin network, for both the parent coin and the child coins. The block time is how long it can take on average amount effort. Some blocks are solved faster than the average block time, some blocks can have a higher than average block effort time. Also some other pools might solve the block first, and there is a slim possibility of an orphan block on a child coin being mined.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card shadow-light mb-4">
+                            <div class="card-header font-weight-bold text-muted" data-translate-key="faqQuestion7">
+                                What is an orphan block?
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text text-dark mb-0" data-translate-key="faqAnswer7">
+                                    An orphan is a block that didn't meet the requirement as a solution to the block found. Also, there can be a situation where another pool or solo miner found the block solution first, and narrowly won the race. Blocks are confirmed by hash verification by all the nodes on the coin's network. If there is a consensus of which node <span class="font-italic">(pool, solo)</span> found it first, then that block is added to the block chain permanently with credit applying to that pool/solo/node. A few orphan blocks on child coins can happen when the parent coin's hash work doesn't meet the requirements.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card shadow-light mb-4">
+                            <div class="card-header font-weight-bold text-muted" data-translate-key="faqQuestion7">
+                                Which payouts scheme is used?
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text text-dark mb-0" data-translate-key="faqAnswer8">
+                                    Proportional (Share-Based): Every time a block is found, its reward is split between miners according to the number of shares they submitted.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card shadow-light mb-4">
+                            <div class="card-header font-weight-bold text-muted" data-translate-key="faqQuestion9">
+                                How current payout estimate is calculated?
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text text-dark mb-0" data-translate-key="faqAnswer9">
+                                    The estimated payout is a calculated using your percentage of valid shares on the total for current round in proportion to the total shares submitted by all miners/workers in that round. This percentage is then applied to the reward of the last block found by the network and subtracting the small pool fee. See the Worker Statistics page on the pool web page.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card shadow-light mb-4">
+                            <div class="card-header font-weight-bold text-muted" data-translate-key="faqQuestion10">
+                                I have been mining on this pool for 1 hour but still have not received any payouts.
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text text-dark mb-0" data-translate-key="faqAnswer10">
+                                    As soon as the block is found you will get your reward. Please wait a little bit more time. Payments can be halted for various reasons within the automated pool software, but highly unlikely. There is usually a minimum payout for each parent coin and child coins. Payments for matured blocks that meet the minimum can also be triggered manually by a pool operator/administrator. Ask nicely in Telegram or Discord support. Please have your information all in order before you ask such as miner application, version number, gpu and cpu information, wallet addresses, and error messages reported.<br />
+                                    The merge mined child coins have a different number of confirmation blocks needed, but at least the pool checks for fully verified blocks set at the interval on the Dashboard page. Not every parent block found generates a child block. Check the Pool Blocks page on the pool. Or configure your settings to get an email alert if you like on the Settings pool page.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card shadow-light mb-4">
+                            <div class="card-header font-weight-bold text-muted" data-translate-key="faqQuestion11">
+                                Why my hashrate is wrong?
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text text-dark mb-0" data-translate-key="faqAnswer11">
+                                    Since you start to mine your hashrate grows gradually. Please wait. The pool determines your hashrate based on the amount of shares sent by your mining rigs (workers). This value could be a little bit different from reported hashrate (in your mining software).
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card shadow-light mb-4">
+                            <div class="card-header font-weight-bold text-muted" data-translate-key="faqQuestion12">
+                                What is solo mining?
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text text-dark mb-0" data-translate-key="faqAnswer12">
+                                    Solo mining is attempting to find a block by yourself separate from the pool of proportional miners collectively solving the current block.You get almost the entire block reward minus a small fee for the pool. You can specfy your mining software by changing the wallet address with a prefix of "solo:" added to your wallet specification. However, if the coin network has a high hash in total (see Dashboard), the difficulty is also higher. Typically only very large mining rigs with at least 5-10% of the coin network total is needed to get timely solo blocks. However, you could get a string of blocks on lucky streak, then not find a block solution for a very long time. The more hash rate, the higher the probability(luck). You can generate a solo configuration on the Getting Started page on the pool. Tick the checkbox "solo mining". However, as solo you are also competing against the pool proportional share miners, and every single node on the parent coin network also.<br />
+                                    In the case of solo merged mining specified in the pool password field, you are also competing against the main pool users on proportional shares, and the entire child coin network and the other pools on the parent network that are also merge mining. However the reward is much higher since you might get two coin blocks(or more) for the same effort.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card shadow-light mb-4">
+                            <div class="card-header font-weight-bold text-muted" data-translate-key="faqQuestion13">
+                                I've been banned by the pool itself. What do I do now?
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text text-dark mb-0" data-translate-key="faqAnswer13">
+                                    Disconnect your miner for five minutes at least. Then try again. Please pay close attention to error messages reported by the pool software to your miner client software. Typical errors are invalid parent wallet address format, or bad child coin wallet address specified in the pool password field. Check your miner logs if you have them turned on.<br />
+                                    Did you forget to turn off nicehash option?<br />
+                                    For persistent banning, check with the pool operator or Administrator to see if there is something else going wrong outside of your control. Links for Telegram and Discord support are on the left side of the pool web page front end.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div id="telegramBot">
+                            <div class="card shadow-light mb-4">
+                                <div class="card-header font-weight-bold text-muted" data-translate-key="faqQuestion14">
+                                    How to use the Telegram Bot?
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text text-dark mb-4" data-translate-key="faqAnswer14">
+                                        Telegram bot will report via Telegram, when your worker is connected,
+                                        disconnected or banned, and payments have been made to your wallet. Also you can check pool stats
+                                        directly from him.
+                                    </p>
+                                    <div>
+                                        <span data-translate-key="botName">Bot name</span>: <a href="https://t.me/cirq_pool_bot" id="telegramBotURL" rel="nofollow" target="_blank">@<span id="telegramBotName">cirq_pool_bot</span></a><br/><br/>
+                                        <span data-translate-key="botCommands">Commands</span>:<br />
+                                        <code><span id="botStats">/stats</span></code> - <span data-translate-key="botStats">Pool statistics</span><br/>
+                                        <code><span id="botBlocks">/blocks</span></code> - <span data-translate-key="botBlocks">Blocks notifications (enable or disable)</span><br/>
+                                        <code><span id="botReport">/report</span> <<span data-translate-key="botAddress">address</span>></code> - <span data-translate-key="botReport">Miner statistics</span><br/>
+                                        <code><span id="botNotify">/notify</span> <<span data-translate-key="botAddress">address</span>></code> - <span data-translate-key="botNotify">Miner notifications (enable or disable)</span><br/><br/>
+                                        <span data-translate-key="botMultiAddresses">Multiple addresses monitoring available.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-details row">
+                <div class="col-md-6 col-lg-3 footer-widget">
+                    <a href="https://cirquity.com"><img src="/img/logo.png" class="logo mb-2" alt="Cirquity"></a>
+                    <p class="sub-heading">Private, fast, secure</p>
+                </div>
+                <div class="col-md-6 col-lg-2 offset-lg-1 footer-widget">
+                    <h5 class="widget-title text-uppercase">Resources</h5>
+                    <ul class="text-muted">
+                        <li><a href="javascript:void(0)" class="text-reset disabled d-none" title="Coming soon">Coin Overview</a></li>
+                        <li><a href="javascript:void(0)" class="text-reset disabled d-none" title="Coming soon">How to Trade Coin</a></li>
+                        <li><a href="https://medium.com/@cirquity" class="text-reset">Blog News</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-2 offset-lg-1 footer-widget">
+                    <h5 class="widget-title text-uppercase">Quick Links</h5>
+                    <ul class="text-muted">
+                        <li><a href="https://explorer.cirquity.com" class="text-reset">Block Explorer</a></li>
+                        <li><a href="https://pool.cirquity.com" class="text-reset">Main Pool</a></li>
+                        <li><a href="javascript:void(0)" class="text-reset disabled d-none" title="Coming soon">Exchange Markets</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-3 footer-widget pl-lg-5 pl-3">
+                    <h6 class="widget-title text-uppercase">Get in touch</h6>
+                    <div class="social text-muted">
+                        <a href="https://github.com/cirquity" class="github text-reset"><i class="fab fa-github-alt"></i></a>
+                        <a href="https://twitter.com/cirquity" class="twitter text-reset"><i class="fab fa-twitter"></i></a>
+                        <a href="https://facebook.com/cirquity" class="facebook text-reset"><i class="fab fa-facebook"></i></a>
+                        <a href="https://medium.com/@cirquity" class="facebook text-reset"><i class="fas fa-bullhorn"></i></a>
+                        <a href="https://t.me/cirquity" class="telegram text-reset"><i class="fab fa-telegram-plane"></i></a>
+                        <a href="https://chat.cirquity.com" class="discord text-reset"><i class="fab fa-discord"></i></a>
+                        <a href="https://www.reddit.com/r/cirquity" class="reddit text-reset d-none"><i class="fab fa-reddit-alien"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row">
+                    <div class="col-lg-4 store-links text-center text-lg-left pb-3 pb-lg-0">
+                        <p class="text-muted">&copy; 2020 Cirquity</p>
+                    </div>
+                    <div class="col-lg-8 text-center text-lg-right d-none">
+                        <ul class="footer-nav text-muted">
+                            <li><a href="" class="text-reset">Terms of Use</a></li>
+                            <li><a href="" class="text-reset">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--====== Javascript & Jquery ======-->
+    <script src="/config.js"></script>
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/bootstrap/bootstrap.bundle.js"></script>
+    <script src="/vendor/mustache/mustache.min.js"></script>
+    <script src="/vendor/timeago/jquery.timeago.js"></script>
+    <script src="/js/translate.min.js"></script>
+    <script src="/js/app.min.js"></script>
+    <script src="/js/faq.min.js"></script>
+</body>
+</html>
