@@ -245,13 +245,13 @@
                                                 <thead>
                                                     <tr>
                                                         <th scope="col"><span data-translate-key="status">Status</span></th>
-                                                        <th scope="col"><span data-translate-key="workerName">Worker Name</span></th>
+                                                        <th scope="col" class="worker"><span data-translate-key="workerName">Worker Name</span></th>
                                                         <th scope="col"><span data-translate-key="hashRate">Hash Rate</span></th>
                                                         <th scope="col" class="col4 sort avghr" title="Average hashrate over the last hour (only includes times the worker was active)"><span data-translate-key="hashRate1h">HR (1h)</span></th>
                                                         <th scope="col" class="col5 sort avghr" title="Average hashrate over the last six hours (only includes times the worker was active)"><span data-translate-key="hashRate6h">HR (6h)</span></th>
                                                         <th scope="col" class="col6 sort avghr" title="Average hashrate over the last day (only includes times the worker was active)"><span data-translate-key="hashRate24h">HR (24h)</span></th>
                                                         <th scope="col"><span data-translate-key="lastShare">Last Share Submitted</span></th>
-                                                        <th scope="col"><span data-translate-key="totalHashes">Total Hashes Submitted</span></th>
+                                                        <th scope="col" class="text-right"><span data-translate-key="totalHashes">Total Hashes Submitted</span></th>
                                                     </tr>
                                                 </thead>
                                                 <tbody class="small-row" id="workersReport_rows_{{coin}}"></tbody>
@@ -266,12 +266,12 @@
                                         <div id="workerPayments{{coin}}" class="table-responsive">
                                             <table class="table mb-0">
                                                 <thead>
-                                                <tr>
-                                                    <th scope="col"><span data-translate-key="timeSent">Time Sent</span></th>
-                                                    <th scope="col"><span data-translate-key="transactionHash">Transaction Hash</span></th>
-                                                    <th scope="col"><span data-translate-key="amount">Amount</span></th>
-                                                    <th scope="col"><span data-translate-key="mixin">Mixin</span></th>
-                                                </tr>
+                                                    <tr>
+                                                        <th scope="col"><span data-translate-key="timeSent">Time Sent</span></th>
+                                                        <th scope="col"><span data-translate-key="transactionHash">Transaction Hash</span></th>
+                                                        <th scope="col" class="text-right"><span data-translate-key="amount">Amount</span></th>
+                                                        <th scope="col" class="text-center"><span data-translate-key="mixin">Mixin</span></th>
+                                                    </tr>
                                                 </thead>
                                                 <tbody class="small-row" id="paymentsReport_rows_{{coin}}"></tbody>
                                             </table>

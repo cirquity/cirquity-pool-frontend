@@ -15936,7 +15936,15 @@ readers do not read off random characters that represent icons */
   width: 35%;
 }
 
+.table thead th.worker {
+  width: 35%;
+}
+
 .table tbody.small-row, .table tbody#blocks-rows, .table tbody#mem-pool-rows, .table tbody#transactions-rows, .table tbody#outputs-rows, .table tbody#inputs-rows, .table tbody#mining-ports-rows {
+  font-size: .8rem;
+}
+
+.table tbody tr th code {
   font-size: .8rem;
 }
 
