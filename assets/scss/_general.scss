@@ -1,0 +1,97 @@
+@import "variables";
+@import "node_modules/bootstrap/scss/functions";
+
+html,
+body {
+  height: 100%;
+}
+
+ul, ol {
+  padding: 0;
+  margin: 0;
+}
+
+section {
+  padding-top: 6.25rem;
+  padding-bottom: 6.25rem;
+
+  .title {
+    margin-bottom: 60px;
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+}
+
+em {
+  font-style: normal;
+}
+
+label {
+  font-size: .75em;
+  text-transform: uppercase;
+}
+
+.waiting {
+  color: $info;
+}
+
+.text-icon {
+  color: $icon-color;
+}
+
+.marketChart {
+  display: none;
+}
+.marketInfos {
+  .icon {
+    position: absolute;
+    right: 0;
+    font-size: 43px;
+    opacity: .2;
+  }
+}
+
+.formatted {
+  background-color: $gray-200;
+  margin-top: 5px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.sub-heading {
+  color: gray("700");
+  margin-bottom: 4em;
+
+  &#donation-address {
+    word-break: break-word;
+  }
+}
+
+.shadow-light {
+  box-shadow: 0 1.5rem 4rem rgba($body-color, .05);
+}
+
+.jqstooltip {
+  font: 14px $font-family-sans-serif !important;
+  border: none !important;
+  background: rgba($body-color, .9) !important;
+  border-radius: 2px !important;
+  margin-top: -20px !important;
+  box-sizing: content-box !important;
+
+  .jqsfield {
+    color: $card-cap-bg;
+    font-size: 14px !important;
+
+    b {
+      color: $card-cap-bg;
+    }
+  }
+}

@@ -1,0 +1,67 @@
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+
+.card {
+  .card-header {
+    padding: 1.5rem 1.25rem;
+
+    &.no-border {
+      border-bottom-width: 0;
+    }
+  }
+  .card-footer {
+
+    &.no-border {
+      border-top-width: 0;
+    }
+  }
+
+  > .table-responsive {
+    .table {
+      thead {
+        th {
+          border-top-width: 0;
+        }
+      }
+    }
+  }
+
+  > .card-group {
+    .card {
+      border-top-width: 0;
+      border-bottom-width: 0;
+
+      &:first-child {
+        border-left-width: 0;
+      }
+
+      &:last-child {
+        border-right-width: 0;
+      }
+    }
+  }
+
+  .card-header-tabs {
+    margin-bottom: -1.5rem;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .card {
+    > .card-group {
+      .card {
+        border-width: 0;
+        margin-bottom: 0;
+
+        &:not(:first-child) {
+          border-top-width: 1px;
+          border-radius: 0;
+        }
+
+        &.border-success {
+          overflow: hidden;
+        }
+      }
+    }
+  }
+}

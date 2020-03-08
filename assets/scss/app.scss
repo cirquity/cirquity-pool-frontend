@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400&display=swap');
+
+// Override Variables
+@import "variables";
+
+// Bootstrap
+@import "node_modules/bootstrap/scss/bootstrap";
+
+// Fontawesome Free
+@import "node_modules/@fortawesome/fontawesome-free/scss/brands";
+@import "node_modules/@fortawesome/fontawesome-free/scss/regular";
+@import "node_modules/@fortawesome/fontawesome-free/scss/solid";
+@import "node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
+
+// Overrides
+@import "component/card";
+@import "component/table";
+
+// Website Design
+@import "general";
+
+// Layout
+@import "layout/header";
+@import "layout/main";
+@import "layout/footer";
+
+
+// Sections
+@import "section/statistics";

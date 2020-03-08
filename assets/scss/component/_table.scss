@@ -1,0 +1,66 @@
+@import "node_modules/bootstrap/scss/mixins";
+
+.table {
+  th, td {
+    padding: 1rem .75rem;
+    white-space: nowrap;
+  }
+
+  tr {
+    > * {
+      &:first-child {
+        padding-left: 1.25rem;
+      }
+
+      &:last-child {
+        padding-right: 1.25rem;
+      }
+    }
+  }
+
+  thead {
+    th {
+      font-size: .75em;
+      text-transform: uppercase;
+
+      &.miner {
+        width: 35%;
+      }
+
+      &.worker {
+        width: 35%;
+      }
+    }
+  }
+
+  tbody {
+    &.small-row,
+    &#blocks-rows,
+    &#mem-pool-rows,
+    &#transactions-rows,
+    &#outputs-rows,
+    &#inputs-rows,
+    &#mining-ports-rows {
+      font-size: .8rem;
+    }
+
+    tr {
+      th {
+        code {
+          font-size: .8rem;
+        }
+      }
+    }
+  }
+}
+
+
+@include media-breakpoint-down(sm) {
+  .table {
+    thead {
+      th {
+        border-top-width: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,103 @@
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/mixins";
+
+footer {
+  background-color: $white;
+  /*border-top: 1px solid $border-color;*/
+
+  .footer-details {
+    padding-top: 6.25rem;
+    padding-bottom: 6.25rem;
+  }
+
+  .footer-widget {
+    .logo {
+      width: 150px;
+    }
+    p {
+      color: gray("700");
+      margin-bottom: 20px;
+    }
+
+    .widget-title {
+      margin-bottom: 15px;
+      font-size: 12px;
+      color: gray("700");
+    }
+
+    ul {
+      list-style: none;
+
+      a {
+        font-size: 16px;
+        display: block;
+        margin-bottom: 12px;
+
+        &.disabled {
+          opacity: 0.5;
+          cursor: help;
+        }
+      }
+
+      li {
+        &:last-child {
+          a {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .social {
+    a {
+      width: 40px;
+      display: inline-block;
+      margin-right: .5rem;
+      text-align: center;
+      font-size: 2rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .footer-bottom {
+    border-top: 1px solid $border-color;
+    padding: 2rem 0;
+
+    p {
+      font-size: .875em;
+    }
+  }
+
+  .footer-nav {
+    list-style: none;
+
+    li {
+      display: inline-block;
+
+      a {
+        font-size: .875em;
+        margin-left: 20px;
+      }
+    }
+  }
+
+}
+
+
+@include media-breakpoint-down(sm) {
+  footer {
+    .footer-details {
+      padding-bottom: 2rem;
+      text-align: center;
+
+      .footer-widget {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}

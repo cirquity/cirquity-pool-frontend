@@ -1,0 +1,39 @@
+@import "node_modules/bootstrap/scss/mixins";
+
+.statistics {
+  h5 {
+    font-size: 1.0625rem;
+  }
+
+  #transaction-hash {
+    word-break: break-word;
+  }
+
+  .card {
+    .list-group {
+      .list-group-item {
+        &.d-none {
+          display: none !important;
+
+          + .list-group-item {
+            border-top: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .statistics {
+    .card-group {
+      box-shadow: none !important;
+    }
+
+    .last-hash {
+      position: absolute;
+      right: 10px;
+      top: -36px;
+    }
+  }
+}

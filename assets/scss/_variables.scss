@@ -1,0 +1,79 @@
+// Bootstrap
+
+$gray-100: #f9fbfd;
+$gray-200: #f1f4f8;
+$gray-300: #d9e2ef;
+$gray-400: #c6d3e6;
+$gray-500: #abbcd5;
+$gray-600: #869ab8;
+$gray-700: #506690;
+$gray-800: #384c74;
+$gray-900: #1b2a4e;
+
+$primary: #335eea;
+$secondary: #506690;
+$success: #42ba96;
+$info: #7c69ef;
+$warning: #fad776;
+$danger: #df4759;
+$light: #f9fbfd;
+$dark: #1b2a4e;
+
+$grays: (
+        "100": $gray-100,
+        "200": $gray-200,
+        "300": $gray-300,
+        "400": $gray-400,
+        "500": $gray-500,
+        "600": $gray-600,
+        "700": $gray-700,
+        "800": $gray-800,
+        "900": $gray-900
+);
+
+$theme-colors: (
+        "primary": $primary,
+        "secondary": $secondary,
+        "success": $success,
+        "info": $info,
+        "warning": $warning,
+        "danger": $danger,
+        "light": $light,
+        "dark": $dark
+);
+
+$font-family-sans-serif: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-size-base: 1rem;
+$font-weight-base: 300;
+$line-height-base: 1.6;
+
+$badge-border-radius: 5rem;
+$badge-padding-y: .30rem;
+$badge-padding-x: 1rem;
+$dropdown-min-width: 7.1rem;
+
+// $body-bg: #f3f7f9;
+$body-color: #161c2d;
+$border-color: $gray-200;
+$input-border-color: #ebebeb;
+$list-group-border-color: $gray-200;
+$navbar-light-color: $gray-700;
+$navbar-light-hover-color: $primary;
+$card-border-color: $gray-200;
+$card-cap-bg: #ffffff;
+$table-color: $gray-700;
+$icon-color: #c2cff9;
+
+/*
+$navbar-nav-link-padding-x: 1rem;
+$btn-border-radius: 2rem;
+$btn-border-radius-lg: 4rem;
+$btn-border-radius-sm: 1rem;
+$input-border-radius: 2rem;
+$input-border-radius-lg: 4rem;
+$input-border-radius-sm: 1rem;
+$h2-font-size: 3rem;
+*/
+
+// Fontawesome
+$fa-font-path: "/vendor/fontawesome";

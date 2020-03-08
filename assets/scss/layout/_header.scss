@@ -1,0 +1,78 @@
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+
+header {
+  .navbar {
+    .navbar-brand {
+      font-weight: 800;
+    }
+    .navbar-toggler {}
+    .navbar-collapse {
+      .nav-link,
+      .btn-outline-primary {
+        font-weight: 500;
+      }
+    }
+    .navbar-brand {
+      img {
+        width: 150px;
+      }
+    }
+
+    .no-caret {
+      .dropdown-toggle:after { content: none }
+    }
+
+    .search-form {
+      padding: 0;
+      border: 0;
+
+      .input-group {
+        padding: 0;
+        width: 590px;
+      }
+    }
+
+    &.active {
+      background-color: $white;
+      box-shadow: $box-shadow-sm;
+    }
+
+    #langSelector {
+      display: none;
+    }
+
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  header {
+    .navbar {
+      background-color: $white;
+      box-shadow: $box-shadow-sm;
+
+      .navbar-collapse {
+        padding-top: 1rem;
+
+        .nav-item {
+          &.dropdown {
+            .dropdown-toggle {
+            }
+            .dropdown-menu {
+              margin-bottom: 1rem;
+            }
+          }
+        }
+      }
+
+      .search-form {
+        display: block !important;
+        box-shadow: none !important;
+
+        .input-group {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
