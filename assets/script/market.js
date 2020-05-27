@@ -33,8 +33,8 @@
 
 
     $.updateSettings = function (updateKey) {};
-    
-    
+
+
     $.marketInitTemplate = function(runOnce, chartsInitialized, loadedData, marketPrices, intervalChartsUpdate, currencyPairs, xhrMarketGets) {
         priceSource = lastStats.config.priceSource || priceSource;
         priceCurrency = lastStats.config.priceCurrency || priceCurrency;
@@ -60,7 +60,7 @@
                 active: 'active'
             });
             $(`#blocksContent`).append(rendered1);
-            
+
             let template2 = $('#siblingCalculatorTemplate').html();
             Mustache.parse(template2);
             let rendered2 = Mustache.render(template2, {
@@ -122,8 +122,8 @@
             isRunOnce = $.marketRunOnce();
         }
     };
-    
-    
+
+
     $.marketCalcEstimateProfit = function(marketPrices) {
         let rateUnit = Math.pow(1000, parseInt($('#calcHashUnit').data('mul')));
         let hashRate = parseFloat($('#calcHashRate').val()) * rateUnit;
@@ -182,21 +182,16 @@
 
     $.marketGetCurrencyPriceText = function(stats, coinsRaw, marketPrices) {
         if (!priceCurrency || !marketPrices[stats.config.coin] || !marketPrices[stats.config.coin][priceCurrency]) return;
-        console.log($.getReadableCoin(stats, coinsRaw, 2, true, true));
-        console.log(marketPrices[stats.config.coin][priceCurrency]);
         let priceInCurrency = (Math.trunc($.getReadableCoin(stats, coinsRaw, 2, true, true) * marketPrices[stats.config.coin][priceCurrency] * 100) / 100);
         return priceInCurrency + ' ' + priceCurrency;
     };
-    
-    
+
+
     $.marketLoadData = function(api, stats, loadedData, currencyPairs, xhrMarketGets, marketPrices) {
         if (loadedData[stats.config.coin]) return;
 
-        console.log(marketCurrencies);
-
         if (typeof marketCurrencies !== 'undefined' && marketCurrencies.length > 0) {
-            let intervalMarketPolling = setInterval($.marketUpdate(api, stats, currencyPairs, xhrMarketGets, marketPrices), 300000);
-            $.marketUpdate(api, stats, currencyPairs, xhrMarketGets, marketPrices);
+            setInterval($.marketUpdate(api, stats, currencyPairs, xhrMarketGets, marketPrices), 300000);
         } else {
             $(`#marketInfos${stats.config.coin}`).hide();
         }
@@ -259,7 +254,7 @@
 
     $.marketRenderPrice = function(base, target, price, source, stats, marketPrices) {
         let icon = '<i class="far fa-money-bill-alt"></i>';
-        
+
         if (target === 'BTC') icon = '<i class="fab fa-btc"></i>';
         if (target === 'BCH') icon = '<i class="fab fa-btc"></i>';
         if (target === 'USD') icon = '<i class="fas fa-dollar-sign"></i>';

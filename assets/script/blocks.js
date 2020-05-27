@@ -140,8 +140,8 @@
 
         isBlockPageInit = true;
     };
-    
-    
+
+
     $.blocksRenderBlocks = function(blocksResults, stats) {
         let $blocksRows = $(`#blocksReport${stats.config.coin}_rows`);
 
@@ -170,8 +170,8 @@
             }
         }
     };
-    
-    
+
+
     $.blocksGetBlockRowElement = function(block, jsonString, stats) {
         let blockStatusClasses = {
             'pending': 'pending',
@@ -198,8 +198,6 @@
                 rowStatus = 'danger';
             }
         }
-
-        console.log(block.height);
 
         row.innerHTML =
             '<td class="col1">' + $.timeago(new Date(parseInt(block.time) * 1000).toISOString()) + '</td>' +
@@ -306,8 +304,8 @@
         $(`#blocksChart${data.config.coin}`).show();
         displayedChart[data.config.coin] = true;
     };
-    
-    
+
+
     $.blocksParseBlock = function(height, serializedBlock, stats) {
         let parts = serializedBlock.split(':');
         let block = {};

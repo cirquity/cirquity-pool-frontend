@@ -16237,3 +16237,11 @@ footer .footer-nav li a {
     top: -36px;
   }
 }
+
+.warning {
+  padding-bottom: 0;
+}
+
+.warning + section {
+  padding-top: 2rem;
+}

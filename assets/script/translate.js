@@ -9,23 +9,22 @@
             };
         }
 
-        if (typeof defaultLang == null) {
-            let defaultLang = 'en';
-        }
-
-        langCode = defaultLang;
+        langCode = defaultLang || 'en';
 
         const $_GET = {};
         const args = location.search.substr(1).split(/&/);
         for (let i = 0; i < args.length; ++i) {
             const tmp = args[i].split(/=/);
+
             if (tmp[0] !== '') {
                 $_GET[decodeURIComponent(tmp[0])] = decodeURIComponent(tmp.slice(1).join('').replace('+', ' '));
-                langCode = $_GET['lang'];
+
+                if ($_GET['lang'] !== undefined)
+                    langCode = $_GET['lang'];
             }
         }
 
-        if (typeof languages !== 'undefined' && languages) {
+        if (typeof languages !== undefined && languages) {
             $.renderLangSelector();
         }
     });
