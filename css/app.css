@@ -16239,9 +16239,11 @@ footer .footer-nav li a {
 }
 
 .warning {
+  display: none;
   padding-bottom: 0;
-}
-
-.warning + section {
-  padding-top: 2rem;
+  /*
+  + section {
+    padding-top: 2rem;
+  }
+  */
 }
