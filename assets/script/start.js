@@ -68,12 +68,16 @@
 
         let algorithm = '';
         let xmrstakAlgo = '';
+        let xmrigAlgo = '';
 
         if (cnAlgorithm === "argon2") {
-            if (cnVariant === 1)
+            if (cnVariant === 1) {
                 algorithm = 'Argon2id WRKZ';
-            else
+            }
+            else {
                 algorithm = 'Argon2id Chukwa';
+                xmrigAlgo = 'argon2';
+            }
         } else if (cnAlgorithm === "randomx") {
             if (cnVariant === 1)
                 algorithm = 'CryptoNight DefyX';
@@ -103,6 +107,7 @@
             } else {
                 algorithm = 'CryptoNight Turtle';
                 xmrstakAlgo = 'cryptonight_turtle';
+                xmrigAlgo = 'cn-pico';
             }
         } else if (cnAlgorithm === "cryptonight_heavy") {
             if (cnVariant === 1) {
@@ -157,6 +162,8 @@
 
         $.updateText('cnAlgorithm', algorithm);
         $.updateText('xmrstakAlgo', xmrstakAlgo);
+        $.updateTextClasses('xmrigAlgo', xmrigAlgo);
+        $.updateTextClasses('cnVariant', cnVariant);
     };
 
     $.generateConf = function () {
