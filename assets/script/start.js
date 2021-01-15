@@ -76,7 +76,7 @@
             }
             else {
                 algorithm = 'Argon2id Chukwa';
-                xmrigAlgo = 'argon2';
+                xmrigAlgo = 'argon2/chukwa';
             }
         } else if (cnAlgorithm === "randomx") {
             if (cnVariant === 1)
