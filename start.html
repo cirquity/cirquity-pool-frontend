@@ -130,7 +130,7 @@
                                     <div class="list-group-item d-flex align-items-center">
                                         <div class="mr-auto">
                                             <h5 class="font-weight-bold mb-1">
-                                                <span><em data-translate-key="parentAddress">ParentAddress</em><span class="paymentIdSeparator">.</span><em data-translate-key="addrPaymentId">PaymentID</em></span>
+                                                <span><em data-translate-key="parentAddress">WalletAddress</em><span class="paymentIdSeparator">.</span><em data-translate-key="addrPaymentId">PaymentID</em></span>
                                             </h5>
                                             <p class="font-size-sm text-muted mb-0" data-translate-key="paymentId">Exchange Payment ID</p>
                                         </div>
@@ -138,7 +138,7 @@
                                     <div class="list-group-item d-flex align-items-center">
                                         <div class="mr-auto">
                                             <h5 class="font-weight-bold mb-1">
-                                                <span><em data-translate-key="parentAddress">ParentAddress</em><span id="fixedDiffSeparator">+</span><em data-translate-key="addrDiff">Diff</em></span>
+                                                <span><em data-translate-key="parentAddress">WalletAddress</em><span id="fixedDiffSeparator">+</span><em data-translate-key="addrDiff">Diff</em></span>
                                             </h5>
                                             <p class="font-size-sm text-muted mb-0" data-translate-key="fixedDiff">Difficulty locking</p>
                                         </div>
@@ -275,8 +275,8 @@
     {
         "pool_address": "<span class="exampleHost">POOL_HOST</span>:<span class="examplePort">PORT</span>",
         "wallet_address": "<span class="exampleLogin">YOUR_WALLET_ADDRESS</span>",
-        "rig_id": "<span class="examplePassword">YOUR_WORKER_NAME</span>",
-        "pool_password": "x",
+        "rig_id": "<span class="examplePassword">YOUR_PASSWORD@YOUR_WORKER_NAME</span>",
+        "pool_password": "<span class="examplePassword">YOUR_PASSWORD@YOUR_WORKER_NAME</span>",
         "use_nicehash": false,
         "use_tls": false, /* Set to true if you are using an SSL port */
         "tls_fingerprint": "",
@@ -299,7 +299,7 @@
     {
         "url": "<span class="exampleHost">POOL_HOST</span>:<span class="examplePort">PORT</span>",
         "user": "<span class="exampleLogin">YOUR_WALLET_ADDRESS</span>",
-        "pass": "<span class="examplePassword">YOUR_WORKER_NAME</span>",
+        "pass": "<span class="examplePassword">YOUR_PASSWORD@YOUR_WORKER_NAME</span>",
         "keepalive": true,
         "nicehash": false,
         "algo": "<span class="xmrigAlgo"></span>",
@@ -321,7 +321,7 @@
     {
         "url": "<span class="exampleHost">POOL_HOST</span>:<span class="examplePort">PORT</span>",
         "user": "<span class="exampleLogin">YOUR_WALLET_ADDRESS</span>",
-        "pass": "<span class="examplePassword">YOUR_WORKER_NAME</span>"
+        "pass": "<span class="examplePassword">YOUR_PASSWORD@YOUR_WORKER_NAME</span>"
         "keepalive": true,
         "nicehash": false,
         "algo": "<span class="xmrigAlgo"></span>",
@@ -343,7 +343,7 @@
     {
         "url": "<span class="exampleHost">POOL_HOST</span>:<span class="examplePort">PORT</span>",
         "user": "<span class="exampleLogin">YOUR_WALLET_ADDRESS</span>",
-        "pass": "<span class="examplePassword">YOUR_WORKER_NAME</span>"
+        "pass": "<span class="examplePassword">YOUR_PASSWORD@YOUR_WORKER_NAME</span>"
         "keepalive": true,
         "nicehash": false,
         "algo": "<span class="xmrigAlgo"></span>",
@@ -365,7 +365,7 @@
     {
         "url": "<span class="exampleHost">POOL_HOST</span>:<span class="examplePort">PORT</span>",
         "user": "<span class="exampleLogin">YOUR_WALLET_ADDRESS</span>",
-        "pass": "<span class="examplePassword">YOUR_WORKER_NAME</span>",
+        "pass": "<span class="examplePassword">YOUR_PASSWORD@YOUR_WORKER_NAME</span>",
         "keepalive": true,
         "nicehash": false
     },

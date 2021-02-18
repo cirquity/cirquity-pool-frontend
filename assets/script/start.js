@@ -194,12 +194,12 @@
         $.updateTextClasses('exampleLogin', login);
 
         // Password
-        let password = '';
+        let password = 'YOUR_PASSWORD';
         if (difficulty) {
-            password = address + lastStats.config.fixedDiffSeparator + difficulty;
+            password = password + lastStats.config.fixedDiffSeparator + difficulty;
         }
         if (workerName) {
-            password = `${workerName}`;
+            password = password  + '@' + workerName;
         }
 
         $.updateTextClasses('examplePassword', password);
