@@ -78,7 +78,8 @@
 
         $.updateText(`blocksMaturityCount${coin}`, lastStats.config.depth.toString());
 
-        $(`#averageLuck${coin}`).html($.formatLuck(lastStats.pool.totalDiff, lastStats.pool.totalShares));
+        let avg = $.formatLuck(lastStats.pool.totalDiff, lastStats.pool.totalShares) + '<small class="text-success">PROP</small> / ' + $.formatLuck(lastStats.pool.totalDiffSolo, lastStats.pool.totalSharesSolo) + '<small class="text-success">SOLO</small>';
+        $(`#averageLuck${coin}`).html(avg);
 
         displayedChart[lastStats.config.coin] = false;
         if (lastStats.charts.blocks) {

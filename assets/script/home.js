@@ -65,6 +65,14 @@
                 }
             }
 
+            if (stats.pool.lastBlockFoundSolo) {
+                let lastChildBlockFound = parseInt(stats.pool.lastBlockFoundSolo);
+                if (lastChildBlockFound > lastBlockFound) {
+                    lastBlockFound = lastChildBlockFound;
+                    $('#poolLastBlockFound').timeago('update', new Date(lastBlockFound).toISOString());
+                }
+            }
+
             let rewardMinusNetworkFee = stats.lastblock.reward - (stats.lastblock.reward * (stats.config.networkFee ? stats.config.networkFee / 100 : 0));
             let hashPowerSolo = lastStats.pool.hashrateSolo / (lastStats.network.difficulty / lastStats.config.coinDifficultyTarget) * 100;
             let hashPower = lastStats.pool.hashrate / (lastStats.network.difficulty / lastStats.config.coinDifficultyTarget) * 100;
@@ -84,7 +92,7 @@
             $.updateText('poolHashrateSolo', $.getReadableHashRateString(lastStats.pool.hashrateSolo) + '/sec');
             $.updateText('hashPowerSolo', hashPowerSolo.toFixed(2) + '%');
             $.updateText('hashPower', hashPower.toFixed(2) + '%');
-            $.updateText('blockSolvedTime', $.getReadableTime(lastStats.network.difficulty / lastStats.pool.hashrate));
+            $.updateText('blockSolvedTime', $.getReadableTime(lastStats.network.difficulty / (lastStats.pool.hashrate + lastStats.pool.hashrateSolo)));
         }
     };
 
@@ -240,7 +248,7 @@
         $.updateText('poolFee', (totalFee > 0 && totalFee !== 100 ? $.floatToString(totalFee) : (totalFee === 100 ? '100' : '0')) + '%');
         $.updateText('paymentsInterval', $.getReadableTime(parentStats.config.paymentsInterval));
         $.updateText('paymentsMinimum', $.getReadableCoin(parentStats, parentStats.config.minPaymentThreshold));
-        $.updateText('blockSolvedTime', $.getReadableTime(parentStats.network.difficulty / parentStats.pool.hashrate));
+        $.updateText('blockSolvedTime', $.getReadableTime(parentStats.network.difficulty / (parentStats.pool.hashrate + parentStats.pool.hashrateSolo)));
         $.updateText(`currentEffort${coin}`, (parentStats.pool.roundHashes / parentStats.network.difficulty * 100).toFixed(1) + '%');
 
         isHomePageInit = true;
