@@ -22,18 +22,20 @@
     };
 
     $.monitoringInfoParse = function (data) {
+        console.log(data);
         let monitoringDaemon = {
             lastCheck: $.getCheckTime(data['monitoring'].daemon.lastCheck) || 'never',
             lastStatus: data['monitoring'].daemon.lastStatus || '',
             lastFail: $.getCheckTime(data['monitoring'].daemon.lastFail) || 'never',
-            lastFailResponse: JSON.stringify(JSON.parse(data['monitoring'].daemon.lastFailResponse),null,4) || ' ',
+            lastFailResponse: (data['monitoring'].daemon.lastFailResponse ? JSON.stringify(JSON.parse(data['monitoring'].daemon.lastFailResponse),null,4) || ' ' : ''),
             lastResponse: JSON.stringify(JSON.parse(data['monitoring'].daemon.lastResponse),null,4) || ' '
         };
+
         let monitoringWallet = {
             lastCheck: $.getCheckTime(data['monitoring'].wallet.lastCheck) || 'never',
             lastStatus: data['monitoring'].wallet.lastStatus || '',
             lastFail: $.getCheckTime(data['monitoring'].wallet.lastFail) || 'never',
-            lastFailResponse: JSON.stringify(JSON.parse(data['monitoring'].wallet.lastFailResponse),null,4) || ' ',
+            lastFailResponse: (data['monitoring'].daemon.lastFailResponse ? JSON.stringify(JSON.parse(data['monitoring'].wallet.lastFailResponse),null,4) || ' ' : ''),
             lastResponse: JSON.stringify(JSON.parse(data['monitoring'].wallet.lastResponse),null,4) || ' '
         };
 
