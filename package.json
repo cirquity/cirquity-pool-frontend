@@ -32,7 +32,7 @@
         "@fortawesome/fontawesome-free": "5.10.2",
         "bootstrap": "4.3.1",
         "chart.js": "^2.9.3",
-        "handlebars": "^4.7.3",
+        "handlebars": "^4.7.7",
         "jquery": "3.5.0",
         "jquery-sparkline": "^2.4.0",
         "moment": "^2.24.0",
